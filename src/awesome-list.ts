@@ -25,6 +25,7 @@ export class AwesomeList extends JsiiProject {
       ...options,
       readme: 'readme.md',
       releaseBranches: ['main'],
+      releaseToNpm: false,
     });
 
     new SampleFile(this, 'code-of-conduct.md', {
