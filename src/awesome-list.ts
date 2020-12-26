@@ -1,4 +1,3 @@
-import * as path from 'path';
 import { JsiiProjectOptions, JsiiProject, SampleFile } from 'projen';
 import { SampleReadme } from './readme';
 
@@ -27,20 +26,18 @@ export class AwesomeList extends JsiiProject {
       releaseBranches: ['main'],
     });
 
-    const root = this.outdir;
-
-    const codeOfConductPath = path.join(root, 'code-of-conduct.md');
-    new SampleFile(this, codeOfConductPath, {
+    new SampleFile(this, 'code-of-conduct.md', {
       contents: this.codeOfConduct(),
     });
 
-    const contributingPath = path.join(root, 'contributing.md');
-    new SampleFile(this, contributingPath, {
+    new SampleFile(this, 'contributing.md', {
       contents: this.contributing(),
     });
 
     const contents = this.readmeContents();
-    new SampleReadme(this, contents);
+    new SampleReadme(this, contents, {
+      filename: 'readme.md',
+    });
 
     // Sets up `npx projen awesome-lint` for linting per awesome-lint standards
     this.addDeps('awesome-lint');
