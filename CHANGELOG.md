@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/p6m7g8/p6-projen-project-awesome-list/compare/v0.0.4...v0.0.5) (2020-12-26)
+
+
+### Bug Fixes
+
+* **awesome-list:** readme.md gets set at project level and passed through ([#5](https://github.com/p6m7g8/p6-projen-project-awesome-list/issues/5)) ([144b436](https://github.com/p6m7g8/p6-projen-project-awesome-list/commit/144b436daaf0d1722b6e3e3d61b291f2bfba31af))
+
 ### [0.0.4](https://github.com/p6m7g8/p6-projen-project-awesome-list/compare/v0.0.3...v0.0.4) (2020-12-26)
 
 
