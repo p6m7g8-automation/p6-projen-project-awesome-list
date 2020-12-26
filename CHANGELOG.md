@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/p6m7g8/p6-projen-project-awesome-list/compare/v0.0.6...v0.0.7) (2020-12-26)
+
+
+### Bug Fixes
+
+* **awesome-list:** disable npm releasing ([#7](https://github.com/p6m7g8/p6-projen-project-awesome-list/issues/7)) ([6c40355](https://github.com/p6m7g8/p6-projen-project-awesome-list/commit/6c40355e996507192e05060ab35fc38966046a64))
+
 ### [0.0.6](https://github.com/p6m7g8/p6-projen-project-awesome-list/compare/v0.0.5...v0.0.6) (2020-12-26)
 
 
