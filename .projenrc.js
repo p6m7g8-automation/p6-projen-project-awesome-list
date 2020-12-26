@@ -26,10 +26,10 @@ const project = new JsiiProject({
   deps: [
     'awesome-lint',
     'fs-extra',
-    'projen',
+    'projen@^0.9.1',
   ],
   peerDeps: [
-    'projen',
+    'projen@^0.9.1',
   ],
 
   /* JsiiProjectOptions */
