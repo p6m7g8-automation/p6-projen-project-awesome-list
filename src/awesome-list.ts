@@ -25,6 +25,7 @@ export class AwesomeList extends JsiiProject {
       ...options,
       readme: 'readme.md',
       releaseBranches: ['main'],
+      gitpod: true,
       releaseToNpm: false,
     });
 
@@ -45,6 +46,13 @@ export class AwesomeList extends JsiiProject {
     const awesomeLintTask = this.addTask('awesome-lint');
     awesomeLintTask.exec('npx awesome-lint');
     this.buildTask.spawn(awesomeLintTask);
+
+    this.gitpod?.addTasks({
+      name: 'Setup',
+      init: 'yarn install',
+      prebuild: 'bash ./projen.bash',
+      command: 'npx projen build',
+    });
   }
 
   //   private readmeContents(): string {
