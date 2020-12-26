@@ -15,8 +15,6 @@ const project = new JsiiProject({
 
   codeCov: true,
   gitpod: true,
-  releaseBranches: ['main'],
-  readme: 'readme.md',
 
   bundledDeps: [
     'awesome-lint',
