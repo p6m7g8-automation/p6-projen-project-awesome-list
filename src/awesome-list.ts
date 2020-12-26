@@ -1,5 +1,5 @@
 import { JsiiProjectOptions, JsiiProject, SampleFile } from 'projen';
-import { SampleReadme } from './readme';
+// import { SampleReadme } from './readme';
 
 /**
  * Configurable knobs for Awesome Lists
@@ -35,10 +35,8 @@ export class AwesomeList extends JsiiProject {
       contents: this.contributing(),
     });
 
-    const contents = this.readmeContents();
-    new SampleReadme(this, contents, {
-      filename: 'readme.md',
-    });
+    // XXX: projen SampleReadme can't do this yet, default is hard coded
+    // const contents = this.readmeContents();
 
     // Sets up `npx projen awesome-lint` for linting per awesome-lint standards
     this.addDeps('awesome-lint');
@@ -48,20 +46,20 @@ export class AwesomeList extends JsiiProject {
     this.buildTask.spawn(awesomeLintTask);
   }
 
-  private readmeContents(): string {
-    const contents = `# Awesome Projen [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+  //   private readmeContents(): string {
+  //     const contents = `# Awesome Projen [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> Curated list of awesome [PROJECT](https://github.com/ORG/REPO) SHORTDESC.
+  // > Curated list of awesome [PROJECT](https://github.com/ORG/REPO) SHORTDESC.
 
-LONGDESC
+  // LONGDESC
 
-## Contents
+  // ## Contents
 
-## Contributing
+  // ## Contributing
 
-Contributions welcome! Read the [contribution guidelines](contributing.md) first.`;
-    return contents;
-  }
+  // Contributions welcome! Read the [contribution guidelines](contributing.md) first.`;
+  //     return contents;
+  //   }
 
   private codeOfConduct(): string {
     const contents = `# Contributor Covenant Code of Conduct
