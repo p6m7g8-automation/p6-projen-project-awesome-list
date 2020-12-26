@@ -23,6 +23,7 @@ export class AwesomeList extends JsiiProject {
   constructor(options: AwesomeListProjectOptions) {
     super({
       ...options,
+      readme: 'readme.md',
       releaseBranches: ['main'],
     });
 
