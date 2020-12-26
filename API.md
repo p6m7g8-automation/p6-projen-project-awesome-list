@@ -112,7 +112,7 @@ new AwesomeList(options: AwesomeListProjectOptions)
   * **python** (<code>[JsiiPythonTarget](#projen-jsiipythontarget)</code>)  *No description* __*Optional*__
   * **rootdir** (<code>string</code>)  *No description* __*Default*__: "."
   * **stability** (<code>string</code>)  *No description* __*Optional*__
-  * **contactEmail** (<code>string</code>)  What e-mail address to list for the Code of Conduct Point of Contact. 
+  * **contactEmail** (<code>string</code>)  What e-mail address to list for the Code of Conduct Point of Contact. __*Default*__: `project.authorAddress`
 
 
 
@@ -128,7 +128,6 @@ Name | Type | Description
 -----|------|-------------
 **authorAddress**🔹 | <code>string</code> | Email or URL of the library author.
 **authorName**🔹 | <code>string</code> | The name of the library author.
-**contactEmail** | <code>string</code> | What e-mail address to list for the Code of Conduct Point of Contact.
 **name**🔹 | <code>string</code> | The name of the library.
 **repository**🔹 | <code>string</code> | Git repository URL.
 **allowLibraryDependencies**?🔹 | <code>boolean</code> | Allow the project to include `peerDependencies` and `bundledDependencies`.<br/>__*Default*__: true
@@ -146,6 +145,7 @@ Name | Type | Description
 **codeCovTokenSecret**?🔹 | <code>string</code> | Define the secret name for a specified https://codecov.io/ token A secret is required to send coverage for private repositories.<br/>__*Default*__: if this option is not specified, only public repositories are supported
 **compat**?🔹 | <code>boolean</code> | Automatically run API compatibility test against the latest version published to npm after compilation.<br/>__*Default*__: false
 **compatIgnore**?🔹 | <code>string</code> | Name of the ignore file for API compatibility tests.<br/>__*Default*__: ".compatignore"
+**contactEmail**? | <code>string</code> | What e-mail address to list for the Code of Conduct Point of Contact.<br/>__*Default*__: `project.authorAddress`
 **copyrightOwner**?🔹 | <code>string</code> | License copyright owner.<br/>__*Default*__: defaults to the value of authorName or "" if `authorName` is undefined.
 **copyrightPeriod**?🔹 | <code>string</code> | The copyright years to put in the LICENSE file.<br/>__*Default*__: current year
 **defaultReleaseBranch**?🔹 | <code>string</code> | The name of the main release branch.<br/>__*Default*__: "master"
