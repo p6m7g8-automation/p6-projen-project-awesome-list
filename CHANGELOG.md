@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.10](https://github.com/p6m7g8/p6-projen-project-awesome-list/compare/v0.0.9...v0.0.10) (2020-12-26)
+
+
+### Features
+
+* **awesome-lint:** move `awesome-lint` into the project ([#10](https://github.com/p6m7g8/p6-projen-project-awesome-list/issues/10)) ([77e10da](https://github.com/p6m7g8/p6-projen-project-awesome-list/commit/77e10da2972813151869fb94e102b51336089481))
+
 ### [0.0.9](https://github.com/p6m7g8/p6-projen-project-awesome-list/compare/v0.0.8...v0.0.9) (2020-12-26)
 
 ### [0.0.8](https://github.com/p6m7g8/p6-projen-project-awesome-list/compare/v0.0.7...v0.0.8) (2020-12-26)
