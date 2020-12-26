@@ -56,12 +56,10 @@
     "projen": "^0.9.1"
   },
   "dependencies": {
-    "awesome-lint": "^0.17.1",
     "fs-extra": "^9.0.1",
     "projen": "^0.9.1"
   },
   "bundledDependencies": [
-    "awesome-lint",
     "fs-extra"
   ],
   "keywords": [

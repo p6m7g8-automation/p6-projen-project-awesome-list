@@ -17,14 +17,12 @@ const project = new JsiiProject({
   gitpod: true,
 
   bundledDeps: [
-    'awesome-lint',
     'fs-extra',
   ],
   devDeps: [
     '@types/fs-extra@^8',
   ],
   deps: [
-    'awesome-lint',
     'fs-extra',
     'projen@^0.9.1',
   ],
