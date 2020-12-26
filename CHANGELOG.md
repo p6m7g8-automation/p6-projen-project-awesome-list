@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/p6m7g8/p6-projen-project-awesome-list/compare/v0.0.5...v0.0.6) (2020-12-26)
+
+
+### Bug Fixes
+
+* `projen.SampleReadme` doesn't support custom contents [yet] ([#6](https://github.com/p6m7g8/p6-projen-project-awesome-list/issues/6)) ([f56230a](https://github.com/p6m7g8/p6-projen-project-awesome-list/commit/f56230aca1db7084c91b7a2d8c9d520b27529e65))
+
 ### [0.0.5](https://github.com/p6m7g8/p6-projen-project-awesome-list/compare/v0.0.4...v0.0.5) (2020-12-26)
 
 
