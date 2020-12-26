@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://github.com/p6m7g8/p6-projen-project-awesome-list/compare/v0.0.7...v0.0.8) (2020-12-26)
+
+
+### Features
+
+* **awesome-list:** enable and configure gitpod ([#8](https://github.com/p6m7g8/p6-projen-project-awesome-list/issues/8)) ([cfb393a](https://github.com/p6m7g8/p6-projen-project-awesome-list/commit/cfb393a9a966fe01861fb7d97dc9171594852816))
+
 ### [0.0.7](https://github.com/p6m7g8/p6-projen-project-awesome-list/compare/v0.0.6...v0.0.7) (2020-12-26)
 
 
