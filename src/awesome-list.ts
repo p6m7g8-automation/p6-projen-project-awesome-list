@@ -43,6 +43,7 @@ export class AwesomeList extends JsiiProject {
     // Sets up `npx projen awesome-lint` for linting per awesome-lint standards
     this.addDeps('awesome-lint');
     this.addPeerDeps('awesome-lint');
+    this.addBundledDeps('awesome-lint');
 
     const awesomeLintTask = this.addTask('awesome-lint');
     awesomeLintTask.exec('npx awesome-lint');
