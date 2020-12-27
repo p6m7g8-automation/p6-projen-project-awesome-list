@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.11](https://github.com/p6m7g8/p6-projen-project-awesome-list/compare/v0.0.10...v0.0.11) (2020-12-27)
+
+
+### Bug Fixes
+
+* **awesome-list:** adds `awesome-lint` to `bundleDeps` ([#11](https://github.com/p6m7g8/p6-projen-project-awesome-list/issues/11)) ([763c964](https://github.com/p6m7g8/p6-projen-project-awesome-list/commit/763c964535d161eba0624b8719f8dde1a926443e))
+
 ### [0.0.10](https://github.com/p6m7g8/p6-projen-project-awesome-list/compare/v0.0.9...v0.0.10) (2020-12-26)
 
 
