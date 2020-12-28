@@ -1,4 +1,4 @@
-import { JsiiProjectOptions, JsiiProject, SampleFile, SampleReadme } from 'projen';
+import { JsiiProjectOptions, JsiiProject, SampleFile } from 'projen';
 
 /**
  * Configurable knobs for Awesome Lists
@@ -22,7 +22,10 @@ export class AwesomeList extends JsiiProject {
   constructor(options: AwesomeListProjectOptions) {
     super({
       ...options,
-      readme: 'readme.md',
+      readme: {
+        filename: 'readme.md',
+        contents: readmeContents(),
+      },
       releaseBranches: ['main'],
       gitpod: true,
       releaseToNpm: false,
@@ -34,12 +37,6 @@ export class AwesomeList extends JsiiProject {
 
     new SampleFile(this, 'contributing.md', {
       contents: this.contributing(),
-    });
-
-    // XXX: projen SampleReadme can't do this yet, default is hard coded
-    const contents = this.readmeContents();
-    new SampleReadme(this, contents, {
-      filename: 'readme.md',
     });
 
     // Sets up `npx projen awesome-lint` for linting per awesome-lint standards
@@ -57,21 +54,6 @@ export class AwesomeList extends JsiiProject {
       prebuild: 'bash ./projen.bash',
       command: 'npx projen build',
     });
-  }
-
-  private readmeContents(): string {
-    const contents = `# Awesome Projen [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-
-  > Curated list of awesome [PROJECT](https://github.com/ORG/REPO) SHORTDESC.
-
-  LONGDESC
-
-  ## Contents
-
-  ## Contributing
-
-  Contributions welcome! Read the [contribution guidelines](contributing.md) first.`;
-    return contents;
   }
 
   private codeOfConduct(): string {
@@ -175,4 +157,19 @@ on the different ways you can update your PR so that we can merge it.
     `;
     return contents;
   }
+}
+
+function readmeContents(): string {
+  const contents = `# Awesome Projen [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+
+  > Curated list of awesome [PROJECT](https://github.com/ORG/REPO) SHORTDESC.
+
+  LONGDESC
+
+  ## Contents
+
+  ## Contributing
+
+  Contributions welcome! Read the [contribution guidelines](contributing.md) first.`;
+  return contents;
 }
