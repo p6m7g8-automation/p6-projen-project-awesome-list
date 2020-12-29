@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.17](https://github.com/p6m7g8/p6-projen-project-awesome-list/compare/v0.0.16...v0.0.17) (2020-12-29)
+
+
+### Bug Fixes
+
+* buildTask only needs the `awesome-lint` ([#18](https://github.com/p6m7g8/p6-projen-project-awesome-list/issues/18)) ([9a2f3ea](https://github.com/p6m7g8/p6-projen-project-awesome-list/commit/9a2f3eadfe6cd1132bcbd1725e05626212db0690))
+
 ### [0.0.16](https://github.com/p6m7g8/p6-projen-project-awesome-list/compare/v0.0.15...v0.0.16) (2020-12-29)
 
 
