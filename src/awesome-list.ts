@@ -26,6 +26,7 @@ export class AwesomeList extends JsiiProject {
         filename: 'readme.md',
         contents: readmeContents(),
       },
+      defaultReleaseBranch: 'main',
       releaseBranches: ['main'],
       gitpod: true,
       releaseToNpm: false,
@@ -55,7 +56,7 @@ export class AwesomeList extends JsiiProject {
     const awesomeLintTask = this.addTask('awesome-lint');
     awesomeLintTask.exec('npx awesome-lint');
 
-    this.buildTask.prepend(awesomeLintTask.toShellCommand());
+    this.buildTask.reset(awesomeLintTask.toShellCommand());
   }
 
   private codeOfConduct(): string {
