@@ -32,19 +32,14 @@ export class AwesomeList extends JsiiProject {
     });
 
     new SampleFile(this, 'code-of-conduct.md', {
-      contents: this.codeOfConduct(),
+      contents: this.codeOfConduct().replace('CONTACTEMAIL', options.contactEmail ?? 'noreply@example.com'),
     });
 
     new SampleFile(this, 'contributing.md', {
       contents: this.contributing(),
     });
 
-    // Sets up `npx projen awesome-lint` for linting per awesome-lint standards
-    this.addDevDeps('awesome-lint');
-
-    const awesomeLintTask = this.addTask('awesome-lint');
-    awesomeLintTask.exec('npx awesome-lint');
-    this.buildTask.spawn(awesomeLintTask);
+    this._awesomeLint();
 
     this.gitpod?.addTasks({
       name: 'Setup',
@@ -52,6 +47,15 @@ export class AwesomeList extends JsiiProject {
       prebuild: 'bash ./projen.bash',
       command: 'npx projen build',
     });
+  }
+
+  private _awesomeLint() {
+    this.addDevDeps('awesome-lint');
+
+    const awesomeLintTask = this.addTask('awesome-lint');
+    awesomeLintTask.exec('npx awesome-lint');
+
+    this.buildTask.prepend(awesomeLintTask.toShellCommand());
   }
 
   private codeOfConduct(): string {
@@ -130,6 +134,7 @@ available at [http://contributor-covenant.org/version/1/4][version]
 [homepage]: http://contributor-covenant.org
 [version]: http://contributor-covenant.org/version/1/4/
     `;
+
     return contents;
   }
 
@@ -153,6 +158,7 @@ the existing one. If you're not sure how to do that,
 [here is a guide](https://github.com/RichardLitt/knowledge/blob/master/github/amending-a-commit-guide.md)
 on the different ways you can update your PR so that we can merge it.
     `;
+
     return contents;
   }
 }
@@ -160,7 +166,7 @@ on the different ways you can update your PR so that we can merge it.
 function readmeContents(): string {
   const contents = `# Awesome Projen [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-  > Curated list of awesome [PROJECT](https://github.com/ORG/REPO) SHORTDESC.
+  > Curated list of awesome [PROJECT](REPOSITORY) SHORTDESC.
 
   LONGDESC
 
@@ -169,5 +175,6 @@ function readmeContents(): string {
   ## Contributing
 
   Contributions welcome! Read the [contribution guidelines](contributing.md) first.`;
+
   return contents;
 }
