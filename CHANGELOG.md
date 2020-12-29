@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.16](https://github.com/p6m7g8/p6-projen-project-awesome-list/compare/v0.0.15...v0.0.16) (2020-12-29)
+
+
+### Features
+
+* replace CONTACTEMAIL in Coc with `options.contactEmail` ([#17](https://github.com/p6m7g8/p6-projen-project-awesome-list/issues/17)) ([e6aa1c7](https://github.com/p6m7g8/p6-projen-project-awesome-list/commit/e6aa1c7595240e69d93a88bbb2c82f81b310cd0b))
+
 ### [0.0.15](https://github.com/p6m7g8/p6-projen-project-awesome-list/compare/v0.0.14...v0.0.15) (2020-12-29)
 
 
