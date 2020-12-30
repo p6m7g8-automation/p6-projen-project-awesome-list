@@ -42,11 +42,9 @@ export class AwesomeList extends JsiiProject {
 
     this._awesomeLint();
 
-    this.gitpod?.addTasks({
+    this.gitpod?.addCustomTask({
       name: 'Setup',
-      init: 'yarn install',
-      prebuild: 'bash ./projen.bash',
-      command: 'npx projen build',
+      command: 'npx projen Setup',
     });
   }
 
