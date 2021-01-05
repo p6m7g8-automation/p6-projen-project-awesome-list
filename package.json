@@ -35,7 +35,7 @@
     "@types/node": "^10.17.0",
     "@typescript-eslint/eslint-plugin": "^4.3.0",
     "@typescript-eslint/parser": "^4.3.0",
-    "eslint": "^7.16.0",
+    "eslint": "^7.17.0",
     "eslint-import-resolver-node": "^0.3.4",
     "eslint-import-resolver-typescript": "^2.3.0",
     "eslint-plugin-import": "^2.22.1",
@@ -43,21 +43,21 @@
     "jest-junit": "^12",
     "jsii": "^1.16.0",
     "jsii-diff": "^1.16.0",
-    "jsii-docgen": "^1.8.6",
+    "jsii-docgen": "^1.8.11",
     "jsii-pacmak": "^1.16.0",
     "jsii-release": "^0.2.10",
-    "json-schema": "^0.2.5",
-    "projen": "^0.12.8",
+    "json-schema": "^0.3.0",
+    "projen": "^0.13.6",
     "standard-version": "^9.0.0",
     "ts-jest": "^26.4.4",
     "typescript": "^3.9.5"
   },
   "peerDependencies": {
-    "projen": "^0.12.8"
+    "projen": "*"
   },
   "dependencies": {
     "fs-extra": "^9.0.1",
-    "projen": "^0.12.8"
+    "projen": "*"
   },
   "bundledDependencies": [
     "fs-extra"
@@ -70,6 +70,10 @@
   "license": "Apache-2.0",
   "version": "0.0.23",
   "jest": {
+    "testMatch": [
+      "**/__tests__/**/*.ts?(x)",
+      "**/?(*.)+(spec|test).ts?(x)"
+    ],
     "clearMocks": true,
     "collectCoverage": true,
     "coverageDirectory": "coverage",
@@ -78,10 +82,6 @@
     ],
     "testPathIgnorePatterns": [
       "/node_modules/"
-    ],
-    "testMatch": [
-      "**/__tests__/**/*.ts?(x)",
-      "**/?(*.)+(spec|test).ts?(x)"
     ],
     "reporters": [
       "default",
