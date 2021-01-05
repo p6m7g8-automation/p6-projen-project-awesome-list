@@ -53,11 +53,11 @@
     "typescript": "^3.9.5"
   },
   "peerDependencies": {
-    "projen": "*"
+    "projen": "^0.13.6"
   },
   "dependencies": {
     "fs-extra": "^9.0.1",
-    "projen": "*"
+    "projen": "^0.13.6"
   },
   "bundledDependencies": [
     "fs-extra"
