@@ -47,3 +47,4 @@ projen new --from p6-projen-project-awesome-list
 ## Author
 
 Philip M. Gollucci <pgollucci@p6m7g8.com>
+
