@@ -11,6 +11,7 @@ const project = new JsiiProject({
     'projen',
   ],
 
+  defaultReleaseBranch: 'master',
   projenUpgradeSecret: 'PROJEN_GITHUB_TOKEN',
 
   codeCov: true,
@@ -107,6 +108,8 @@ const project = new JsiiProject({
   // parent: undefined,                                                        /* The parent project, if this project is part of a bigger project. */
   // readme: 'README.md',                                                      /* The name of the README.md file. */
 });
+
+project.gitignore.exclude('.node-version');
 
 project.github.addMergifyRules({
   name: 'Label core contributions',
