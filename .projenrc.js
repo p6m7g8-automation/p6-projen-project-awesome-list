@@ -25,10 +25,10 @@ const project = new JsiiProject({
   ],
   deps: [
     'fs-extra',
-    'projen',
+    'projen@^0',
   ],
   peerDeps: [
-    'projen',
+    'projen@^0',
   ],
 
   /* JsiiProjectOptions */
