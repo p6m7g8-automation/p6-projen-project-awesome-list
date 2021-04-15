@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.32](https://github.com/p6m7g8/p6-projen-project-awesome-list/compare/v0.1.31...v0.1.32) (2021-04-15)
+
+
+### Bug Fixes
+
+* **cicd:** SECURITY - https://about.codecov.io/security-update; DISABLED ([#146](https://github.com/p6m7g8/p6-projen-project-awesome-list/issues/146)) ([192fd90](https://github.com/p6m7g8/p6-projen-project-awesome-list/commit/192fd9090abb45791bf3d1ed699bccfcd3b6dc75))
+
 ### [0.1.31](https://github.com/p6m7g8/p6-projen-project-awesome-list/compare/v0.1.30...v0.1.31) (2021-04-15)
 
 ### [0.1.30](https://github.com/p6m7g8/p6-projen-project-awesome-list/compare/v0.1.29...v0.1.30) (2021-04-14)
