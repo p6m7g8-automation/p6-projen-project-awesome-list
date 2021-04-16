@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.33](https://github.com/p6m7g8/p6-projen-project-awesome-list/compare/v0.1.32...v0.1.33) (2021-04-16)
+
 ### [0.1.32](https://github.com/p6m7g8/p6-projen-project-awesome-list/compare/v0.1.31...v0.1.32) (2021-04-15)
 
 
