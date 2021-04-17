@@ -1,5 +1,4 @@
 Projen External Project to setup an Awesome List
-
 # p6-projen-project-awesome-list
 - [p6-projen-project-awesome-list](#p6-projen-project-awesome-list)
   - [Badges](#badges)
@@ -17,10 +16,9 @@ Projen External Project to setup an Awesome List
 ![Build](https://github.com/p6m7g8/p6-projen-project-awesome-list/workflows/Build/badge.svg)
 ![Release](https://github.com/p6m7g8/p6-projen-project-awesome-list/workflows/Release/badge.svg)
 [![Mergify](https://img.shields.io/endpoint.svg?url=https://gh.mergify.io/badges/p6m7g8/p6-projen-project-awesome-list/&style=flat)](https://mergify.io)
-[![codecov](https://codecov.io/gh/p6m7g8/p6-projen-project-awesome-list/branch/master/graph/badge.svg?token=14Yj1fZbew)](https://codecov.io/gh/p6m7g8/p6-projen-project-awesome-list)
 [![Known Vulnerabilities](https://snyk.io/test/github/p6m7g8/p6-projen-project-awesome-list/badge.svg?targetFile=package.json)](https://snyk.io/test/github/p6m7g8/p6-projen-project-awesome-list?targetFile=package.json)
 [![Gihub repo dependents](https://badgen.net/github/dependents-repo/p6m7g8/p6-projen-project-awesome-list)](https://github.com/p6m7g8/p6-projen-project-awesome-list/network/dependents?dependent_type=REPOSITORY)
-[![Gihub package dependents](https://badgen.net/github/dependents-pkg/p6m7g8/p6-projen-project-awesome-list)](https://github.com/p6m7g8/p6-projen-project-awesome-list/network/dependents?dependent_type=PACKAGE)
+[![Github package dependents](https://badgen.net/github/dependents-pkg/p6m7g8/p6-projen-project-awesome-list)](https://github.com/p6m7g8/p6-projen-project-awesome-list/network/dependents?dependent_type=PACKAGE)
 
 ## Distributions
 

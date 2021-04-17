@@ -11,9 +11,10 @@ const project = new JsiiProject({
     'projen',
   ],
 
-  defaultReleaseBranch: 'master',
+  defaultReleaseBranch: 'main',
   projenUpgradeSecret: 'PROJEN_GITHUB_TOKEN',
 
+  docgen: true,
   gitpod: true,
 
   bundledDeps: [
