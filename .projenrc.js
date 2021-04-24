@@ -30,6 +30,11 @@ const project = new JsiiProject({
   peerDeps: [
     'projen@^0',
   ],
+
+  python: {
+    distName: 'p6-projen-project-awesome-list',
+    module: 'p6_projen_project_awesome_list',
+  },
 });
 
 project.gitignore.exclude('.node-version');
