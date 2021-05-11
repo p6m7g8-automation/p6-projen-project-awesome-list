@@ -31,11 +31,11 @@ new AwesomeList(options: AwesomeListProjectOptions)
 ```
 
 * **options** (<code>[AwesomeListProjectOptions](#p6-projen-project-awesome-list-awesomelistprojectoptions)</code>)  *No description*
+  * **mergify** (<code>boolean</code>)  Whether mergify should be enabled on this repository or not. __*Default*__: true
   * **name** (<code>string</code>)  This is the name of your project. 
   * **clobber** (<code>boolean</code>)  Add a `clobber` task which resets the repo to origin. __*Default*__: true
   * **devContainer** (<code>boolean</code>)  Add a VSCode development environment (used for GitHub Codespaces). __*Default*__: false
   * **gitpod** (<code>boolean</code>)  Add a Gitpod development environment. __*Default*__: false
-  * **jsiiFqn** (<code>string</code>)  The JSII FQN (fully qualified name) of the project class. __*Default*__: undefined
   * **logging** (<code>[LoggerOptions](#projen-loggeroptions)</code>)  Configure logging options such as verbosity. __*Default*__: {}
   * **outdir** (<code>string</code>)  The root directory of the project. __*Default*__: "."
   * **parent** (<code>[Project](#projen-project)</code>)  The parent project, if this project is part of a bigger project. __*Optional*__
@@ -88,7 +88,6 @@ new AwesomeList(options: AwesomeListProjectOptions)
   * **jest** (<code>boolean</code>)  Setup jest unit tests. __*Default*__: true
   * **jestOptions** (<code>[JestOptions](#projen-jestoptions)</code>)  Jest options. __*Default*__: default options
   * **jsiiReleaseVersion** (<code>string</code>)  Version requirement of `jsii-release` which is used to publish modules to npm. __*Default*__: "latest"
-  * **mergify** (<code>boolean</code>)  Adds mergify configuration. __*Default*__: true
   * **mergifyAutoMergeLabel** (<code>string</code>)  Automatically merge PRs that build successfully and have this label. __*Default*__: "auto-merge"
   * **mergifyOptions** (<code>[github.MergifyOptions](#projen-github-mergifyoptions)</code>)  Options for mergify. __*Default*__: default options
   * **mutableBuild** (<code>boolean</code>)  Automatically update files modified during builds to pull-request branches. __*Default*__: true
@@ -96,6 +95,8 @@ new AwesomeList(options: AwesomeListProjectOptions)
   * **npmignoreEnabled** (<code>boolean</code>)  Defines an .npmignore file. Normally this is only needed for libraries that are packaged as tarballs. __*Default*__: true
   * **projenDevDependency** (<code>boolean</code>)  Indicates of "projen" should be installed as a devDependency. __*Default*__: true
   * **projenDuringBuild** (<code>boolean</code>)  Execute `projen` as the first step of the `build` task to synthesize project files. __*Default*__: true
+  * **projenrcJs** (<code>boolean</code>)  Generate (once) .projenrc.js (in JavaScript). Set to `false` in order to disable .projenrc.js generation. __*Default*__: true
+  * **projenrcJsOptions** (<code>[javascript.ProjenrcOptions](#projen-javascript-projenrcoptions)</code>)  Options for .projenrc.js. __*Default*__: default options
   * **projenUpgradeAutoMerge** (<code>boolean</code>)  Automatically merge projen upgrade PRs when build passes. __*Default*__: "true" if mergify auto-merge is enabled (default)
   * **projenUpgradeSchedule** (<code>Array<string></code>)  Customize the projenUpgrade schedule in cron expression. __*Default*__: [ "0 6 * * *" ]
   * **projenUpgradeSecret** (<code>string</code>)  Periodically submits a pull request for projen upgrades (executes `yarn projen:upgrade`). __*Default*__: no automatic projen upgrade pull requests
@@ -120,6 +121,8 @@ new AwesomeList(options: AwesomeListProjectOptions)
   * **eslintOptions** (<code>[EslintOptions](#projen-eslintoptions)</code>)  Eslint options. __*Default*__: opinionated default options
   * **libdir** (<code>string</code>)  Typescript  artifacts output directory. __*Default*__: "lib"
   * **package** (<code>boolean</code>)  Defines a `yarn package` command that will produce a tarball and place it under `dist/js`. __*Default*__: true
+  * **projenrcTs** (<code>boolean</code>)  Use TypeScript for your projenrc file (`.projenrc.ts`). __*Default*__: false
+  * **projenrcTsOptions** (<code>[typescript.ProjenrcOptions](#projen-typescript-projenrcoptions)</code>)  Options for .projenrc.ts. __*Optional*__
   * **sampleCode** (<code>boolean</code>)  Generate one-time sample in `src/` and `test/` if there are no files there. __*Default*__: true
   * **srcdir** (<code>string</code>)  Typescript sources directory. __*Default*__: "src"
   * **testdir** (<code>string</code>)  Jest tests directory. Tests files should be named `xxx.test.ts`. __*Default*__: "test"
@@ -197,7 +200,6 @@ Name | Type | Description
 **homepage**?🔹 | <code>string</code> | Package's Homepage / Website.<br/>__*Optional*__
 **jest**?🔹 | <code>boolean</code> | Setup jest unit tests.<br/>__*Default*__: true
 **jestOptions**?🔹 | <code>[JestOptions](#projen-jestoptions)</code> | Jest options.<br/>__*Default*__: default options
-**jsiiFqn**?🔹 | <code>string</code> | The JSII FQN (fully qualified name) of the project class.<br/>__*Default*__: undefined
 **jsiiReleaseVersion**?🔹 | <code>string</code> | Version requirement of `jsii-release` which is used to publish modules to npm.<br/>__*Default*__: "latest"
 **keywords**?🔹 | <code>Array<string></code> | Keywords to include in `package.json`.<br/>__*Optional*__
 **libdir**?🔹 | <code>string</code> | Typescript  artifacts output directory.<br/>__*Default*__: "lib"
@@ -205,7 +207,7 @@ Name | Type | Description
 **licensed**?🔹 | <code>boolean</code> | Indicates if a license should be added.<br/>__*Default*__: true
 **logging**?🔹 | <code>[LoggerOptions](#projen-loggeroptions)</code> | Configure logging options such as verbosity.<br/>__*Default*__: {}
 **maxNodeVersion**?🔹 | <code>string</code> | Minimum node.js version to require via `engines` (inclusive).<br/>__*Default*__: no max
-**mergify**?🔹 | <code>boolean</code> | Adds mergify configuration.<br/>__*Default*__: true
+**mergify**?🔹 | <code>boolean</code> | Whether mergify should be enabled on this repository or not.<br/>__*Default*__: true
 **mergifyAutoMergeLabel**?🔹 | <code>string</code> | Automatically merge PRs that build successfully and have this label.<br/>__*Default*__: "auto-merge"
 **mergifyOptions**?🔹 | <code>[github.MergifyOptions](#projen-github-mergifyoptions)</code> | Options for mergify.<br/>__*Default*__: default options
 **minNodeVersion**?🔹 | <code>string</code> | Minimum Node.js version to require via package.json `engines` (inclusive).<br/>__*Default*__: no "engines" specified
@@ -233,6 +235,10 @@ Name | Type | Description
 **projenUpgradeSchedule**?🔹 | <code>Array<string></code> | Customize the projenUpgrade schedule in cron expression.<br/>__*Default*__: [ "0 6 * * *" ]
 **projenUpgradeSecret**?🔹 | <code>string</code> | Periodically submits a pull request for projen upgrades (executes `yarn projen:upgrade`).<br/>__*Default*__: no automatic projen upgrade pull requests
 **projenVersion**?🔹 | <code>string</code> | Version of projen to install.<br/>__*Default*__: Defaults to the latest version.
+**projenrcJs**?🔹 | <code>boolean</code> | Generate (once) .projenrc.js (in JavaScript). Set to `false` in order to disable .projenrc.js generation.<br/>__*Default*__: true
+**projenrcJsOptions**?🔹 | <code>[javascript.ProjenrcOptions](#projen-javascript-projenrcoptions)</code> | Options for .projenrc.js.<br/>__*Default*__: default options
+**projenrcTs**?🔹 | <code>boolean</code> | Use TypeScript for your projenrc file (`.projenrc.ts`).<br/>__*Default*__: false
+**projenrcTsOptions**?🔹 | <code>[typescript.ProjenrcOptions](#projen-typescript-projenrcoptions)</code> | Options for .projenrc.ts.<br/>__*Optional*__
 **publishToGo**?🔹 | <code>[JsiiGoTarget](#projen-jsiigotarget)</code> | Publish Go bindings to a git repository.<br/>__*Default*__: no publishing
 **publishToMaven**?🔹 | <code>[JsiiJavaTarget](#projen-jsiijavatarget)</code> | Publish to maven.<br/>__*Default*__: no publishing
 **publishToNuget**?🔹 | <code>[JsiiDotNetTarget](#projen-jsiidotnettarget)</code> | Publish to NuGet.<br/>__*Default*__: no publishing
