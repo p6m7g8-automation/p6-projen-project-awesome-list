@@ -114,9 +114,20 @@
   "jsii": {
     "outdir": "dist",
     "targets": {
+      "java": {
+        "package": "com.github.p6m7g8.p6projenprojectawesomelist",
+        "maven": {
+          "groupId": "com.github.p6m7g8",
+          "artifactId": "p6-projen-project-awesome-list"
+        }
+      },
       "python": {
         "distName": "p6-projen-project-awesome-list",
         "module": "p6_projen_project_awesome_list"
+      },
+      "dotnet": {
+        "namespace": "P6m7g8.P6ProjenProjectAwesomeList",
+        "packageId": "P6m7g8.P6ProjenProjectAwesomeList"
       }
     },
     "tsc": {

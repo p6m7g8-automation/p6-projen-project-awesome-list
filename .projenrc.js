@@ -31,9 +31,20 @@ const project = new JsiiProject({
     'projen@^0',
   ],
 
-  python: {
+  publishToPypi: {
     distName: 'p6-projen-project-awesome-list',
     module: 'p6_projen_project_awesome_list',
+  },
+
+  publishToMaven: {
+    javaPackage: 'com.github.p6m7g8.p6projenprojectawesomelist',
+    mavenGroupId: 'com.github.p6m7g8',
+    mavenArtifactId: 'p6-projen-project-awesome-list',
+  },
+
+  publishToNuget: {
+    dotNetNamespace: 'P6m7g8.P6ProjenProjectAwesomeList',
+    packageId: 'P6m7g8.P6ProjenProjectAwesomeList',
   },
 });
 
